@@ -22,7 +22,7 @@ public class Maincontroller extends javax.swing.JFrame {
         
         setTitle("Main Controller");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocation(360, 100);
+        setLocation(80, 10);
         setVisible(true);
     }
       public void setMessageheli(String message){
