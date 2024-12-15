@@ -63,7 +63,7 @@ public class Tank extends javax.swing.JFrame implements warObserver{
         jTextAreaTank.setRows(5);
         jScrollPane1.setViewportView(jTextAreaTank);
 
-        sendbtnh.setBackground(new java.awt.Color(0, 204, 204));
+        sendbtnh.setBackground(new java.awt.Color(255, 0, 51));
         sendbtnh.setFont(new java.awt.Font("Humnst777 BlkCn BT", 0, 12)); // NOI18N
         sendbtnh.setText("Send");
         sendbtnh.addActionListener(new java.awt.event.ActionListener() {
@@ -72,8 +72,9 @@ public class Tank extends javax.swing.JFrame implements warObserver{
             }
         });
 
-        shootbtnt.setBackground(new java.awt.Color(255, 51, 51));
+        shootbtnt.setBackground(new java.awt.Color(0, 0, 0));
         shootbtnt.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        shootbtnt.setForeground(new java.awt.Color(255, 255, 0));
         shootbtnt.setText("Shoot");
         shootbtnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,8 +82,9 @@ public class Tank extends javax.swing.JFrame implements warObserver{
             }
         });
 
-        redarbtnt.setBackground(new java.awt.Color(0, 255, 102));
+        redarbtnt.setBackground(new java.awt.Color(0, 0, 0));
         redarbtnt.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        redarbtnt.setForeground(new java.awt.Color(255, 255, 0));
         redarbtnt.setText("Redar Operation");
         redarbtnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,8 +92,9 @@ public class Tank extends javax.swing.JFrame implements warObserver{
             }
         });
 
-        missilebtnt.setBackground(new java.awt.Color(255, 255, 51));
+        missilebtnt.setBackground(new java.awt.Color(0, 0, 0));
         missilebtnt.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        missilebtnt.setForeground(new java.awt.Color(255, 255, 0));
         missilebtnt.setText("Missile Operation");
         missilebtnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,8 +115,9 @@ public class Tank extends javax.swing.JFrame implements warObserver{
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        rotatebtnht.setBackground(new java.awt.Color(255, 0, 255));
+        rotatebtnht.setBackground(new java.awt.Color(0, 0, 0));
         rotatebtnht.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        rotatebtnht.setForeground(new java.awt.Color(255, 255, 0));
         rotatebtnht.setText("Rotate Shootion");
         rotatebtnht.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

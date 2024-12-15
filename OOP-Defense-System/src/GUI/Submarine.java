@@ -62,7 +62,7 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
         jTextAreasubmarine.setRows(5);
         jScrollPane1.setViewportView(jTextAreasubmarine);
 
-        sendbtns.setBackground(new java.awt.Color(0, 204, 204));
+        sendbtns.setBackground(new java.awt.Color(255, 0, 51));
         sendbtns.setFont(new java.awt.Font("Humnst777 BlkCn BT", 0, 12)); // NOI18N
         sendbtns.setText("Send");
         sendbtns.addActionListener(new java.awt.event.ActionListener() {
@@ -71,8 +71,9 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
             }
         });
 
-        shootbtns.setBackground(new java.awt.Color(255, 51, 51));
+        shootbtns.setBackground(new java.awt.Color(0, 0, 0));
         shootbtns.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        shootbtns.setForeground(new java.awt.Color(255, 255, 0));
         shootbtns.setText("Shoot");
         shootbtns.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,8 +81,9 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
             }
         });
 
-        tomahawkbtns.setBackground(new java.awt.Color(0, 255, 102));
+        tomahawkbtns.setBackground(new java.awt.Color(0, 0, 0));
         tomahawkbtns.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        tomahawkbtns.setForeground(new java.awt.Color(255, 255, 0));
         tomahawkbtns.setText("Tomahawk Misssile");
         tomahawkbtns.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,8 +91,9 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
             }
         });
 
-        sonarbtns.setBackground(new java.awt.Color(255, 255, 51));
+        sonarbtns.setBackground(new java.awt.Color(0, 0, 0));
         sonarbtns.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        sonarbtns.setForeground(new java.awt.Color(255, 255, 0));
         sonarbtns.setText("Sonar Operation");
         sonarbtns.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,8 +101,9 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
             }
         });
 
-        tinderbtns.setBackground(new java.awt.Color(255, 0, 255));
+        tinderbtns.setBackground(new java.awt.Color(0, 0, 0));
         tinderbtns.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        tinderbtns.setForeground(new java.awt.Color(255, 255, 0));
         tinderbtns.setText("Trident-2 Missile");
         tinderbtns.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

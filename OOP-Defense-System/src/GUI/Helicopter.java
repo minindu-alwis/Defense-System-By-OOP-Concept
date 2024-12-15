@@ -62,7 +62,7 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
         jTextAreahelicopter.setRows(5);
         jScrollPane1.setViewportView(jTextAreahelicopter);
 
-        sendbtnh.setBackground(new java.awt.Color(0, 204, 204));
+        sendbtnh.setBackground(new java.awt.Color(255, 0, 51));
         sendbtnh.setFont(new java.awt.Font("Humnst777 BlkCn BT", 0, 12)); // NOI18N
         sendbtnh.setText("Send");
         sendbtnh.addActionListener(new java.awt.event.ActionListener() {
@@ -71,8 +71,9 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
             }
         });
 
-        shootbtnh.setBackground(new java.awt.Color(255, 51, 51));
+        shootbtnh.setBackground(new java.awt.Color(0, 0, 0));
         shootbtnh.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        shootbtnh.setForeground(new java.awt.Color(255, 255, 0));
         shootbtnh.setText("Shoot");
         shootbtnh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,8 +81,9 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
             }
         });
 
-        laserbtnh.setBackground(new java.awt.Color(0, 255, 102));
+        laserbtnh.setBackground(new java.awt.Color(0, 0, 0));
         laserbtnh.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        laserbtnh.setForeground(new java.awt.Color(255, 255, 0));
         laserbtnh.setText("Laser Operation");
         laserbtnh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,8 +91,9 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
             }
         });
 
-        missilebtnh.setBackground(new java.awt.Color(255, 255, 51));
+        missilebtnh.setBackground(new java.awt.Color(0, 0, 0));
         missilebtnh.setFont(new java.awt.Font("Myriad Pro Light", 0, 12)); // NOI18N
+        missilebtnh.setForeground(new java.awt.Color(255, 255, 0));
         missilebtnh.setText("Missile Operation");
         missilebtnh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
