@@ -36,10 +36,10 @@ public class Tank extends javax.swing.JFrame implements warObserver{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel5 = new javax.swing.JLabel();
+        areatexttank = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextAreahelicopter = new javax.swing.JTextArea();
-        jTextFieldhelicopter = new javax.swing.JTextField();
+        jTextAreaTank = new javax.swing.JTextArea();
+        jTextFieldTank = new javax.swing.JTextField();
         sendbtnh = new javax.swing.JButton();
         shootbtnt = new javax.swing.JButton();
         redarbtnt = new javax.swing.JButton();
@@ -56,12 +56,12 @@ public class Tank extends javax.swing.JFrame implements warObserver{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tank");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel5.setText("Area Not Cleared");
+        areatexttank.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        areatexttank.setText("Area Not Cleared");
 
-        jTextAreahelicopter.setColumns(20);
-        jTextAreahelicopter.setRows(5);
-        jScrollPane1.setViewportView(jTextAreahelicopter);
+        jTextAreaTank.setColumns(20);
+        jTextAreaTank.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaTank);
 
         sendbtnh.setBackground(new java.awt.Color(0, 204, 204));
         sendbtnh.setFont(new java.awt.Font("Humnst777 BlkCn BT", 0, 12)); // NOI18N
@@ -153,7 +153,7 @@ public class Tank extends javax.swing.JFrame implements warObserver{
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(79, 79, 79)
-                                .addComponent(jLabel5))
+                                .addComponent(areatexttank))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(redarbtnt, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -162,7 +162,7 @@ public class Tank extends javax.swing.JFrame implements warObserver{
                                 .addComponent(positiontank, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jTextFieldhelicopter)
+                                    .addComponent(jTextFieldTank)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(sendbtnh, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -195,7 +195,7 @@ public class Tank extends javax.swing.JFrame implements warObserver{
                                 .addGap(18, 18, 18)
                                 .addComponent(positiontank))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(areatexttank)
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(shootbtnt, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -208,7 +208,7 @@ public class Tank extends javax.swing.JFrame implements warObserver{
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextFieldhelicopter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldTank, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sendbtnh)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
@@ -222,7 +222,7 @@ public class Tank extends javax.swing.JFrame implements warObserver{
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendbtnhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendbtnhActionPerformed
-        // TODO add your handling code here:
+        main.setMessagetank(" "+ jTextFieldTank.getText());
     }//GEN-LAST:event_sendbtnhActionPerformed
 
     private void redarbtntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redarbtntActionPerformed
@@ -242,21 +242,21 @@ public class Tank extends javax.swing.JFrame implements warObserver{
     }//GEN-LAST:event_rotatebtnhtActionPerformed
 
     private void positiontankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positiontankActionPerformed
-        // TODO add your handling code here:
+         isCheckedPosition = positiontank.isSelected();
     }//GEN-LAST:event_positiontankActionPerformed
 
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ammotext;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel areatexttank;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
-    private javax.swing.JTextArea jTextAreahelicopter;
-    private javax.swing.JTextField jTextFieldhelicopter;
+    private javax.swing.JTextArea jTextAreaTank;
+    private javax.swing.JTextField jTextFieldTank;
     private javax.swing.JButton missilebtnt;
     private javax.swing.JCheckBox positiontank;
     private javax.swing.JButton redarbtnt;
@@ -266,18 +266,42 @@ public class Tank extends javax.swing.JFrame implements warObserver{
     private javax.swing.JLabel soldiertext;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void setAreaClear(boolean isChecked) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setAreaClear(boolean isChecked){
+        if (isChecked) {
+            areatexttank.setText("Area Cleared");
+        }else{
+            areatexttank.setText("Area Not Cleared");
+        }
     }
 
     @Override
     public void setActivateButtons(int value) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (isCheckedPosition) {
+            if (value>20) {
+                shootbtnt.setEnabled(true);
+            }else{
+                shootbtnt.setEnabled(false);
+            }
+            if (value>40) {
+                missilebtnt.setEnabled(true);
+            }else{
+                missilebtnt.setEnabled(false);
+            }
+            if (value>60) {
+                redarbtnt.setEnabled(true);
+            }else{
+                redarbtnt.setEnabled(false);
+            }
+            if (value>80) {
+                rotatebtnht.setEnabled(true);
+            }else{
+                rotatebtnht.setEnabled(false);
+            }
+        }
     }
 
     @Override
     public void setMessageFromMainController(String message) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        jTextAreaTank.setText(message);
     }
 }

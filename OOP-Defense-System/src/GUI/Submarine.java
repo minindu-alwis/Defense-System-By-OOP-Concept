@@ -33,7 +33,7 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel5 = new javax.swing.JLabel();
+        areatextsub = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreasubmarine = new javax.swing.JTextArea();
         jTextFieldsubmarine = new javax.swing.JTextField();
@@ -55,8 +55,8 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Submarine");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel5.setText("Area Not Cleared");
+        areatextsub.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        areatextsub.setText("Area Not Cleared");
 
         jTextAreasubmarine.setColumns(20);
         jTextAreasubmarine.setRows(5);
@@ -132,6 +132,11 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
         jLabel7.setText("Oxigen");
 
         positionsubmarine.setText("Position");
+        positionsubmarine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                positionsubmarineActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -162,7 +167,7 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(79, 79, 79)
-                                            .addComponent(jLabel5))
+                                            .addComponent(areatextsub))
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(jTextFieldsubmarine, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -209,7 +214,7 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
                                 .addGap(18, 18, 18)
                                 .addComponent(positionsubmarine))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(areatextsub)
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(shootbtns, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -240,7 +245,7 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendbtnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendbtnsActionPerformed
-        // TODO add your handling code here:
+       main.setMessagesub(" "+jTextFieldsubmarine.getText());
     }//GEN-LAST:event_sendbtnsActionPerformed
 
     private void tinderbtnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tinderbtnsActionPerformed
@@ -259,10 +264,14 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
         // TODO add your handling code here:
     }//GEN-LAST:event_shootbtnsActionPerformed
 
+    private void positionsubmarineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positionsubmarineActionPerformed
+         isCheckedPosition = positionsubmarine.isSelected();
+    }//GEN-LAST:event_positionsubmarineActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ammotext;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel areatextsub;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
@@ -282,17 +291,42 @@ public class Submarine extends javax.swing.JFrame implements warObserver{
     // End of variables declaration//GEN-END:variables
 
     @Override
-    public void setAreaClear(boolean isChecked) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+     public void setAreaClear(boolean isChecked){
+        if (isChecked) {
+            areatextsub.setText("Area Cleared");
+        }else{
+            areatextsub.setText("Area Not Cleared");
+        }
     }
-
+     
     @Override
     public void setActivateButtons(int value) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (isCheckedPosition) {
+            if (value>20) {
+                shootbtns.setEnabled(true);
+            }else{
+                shootbtns.setEnabled(false);
+            }
+            if (value>40) {
+                sonarbtns.setEnabled(true);
+            }else{
+                sonarbtns.setEnabled(false);
+            }
+            if (value>60) {
+                tomahawkbtns.setEnabled(true);
+            }else{
+                tomahawkbtns.setEnabled(false);
+            }
+            if (value>80) {
+                tinderbtns.setEnabled(true);
+            }else{
+                tinderbtns.setEnabled(false);
+            }
+        }
     }
 
     @Override
     public void setMessageFromMainController(String message) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         jTextAreasubmarine.setText(message);
     }
 }

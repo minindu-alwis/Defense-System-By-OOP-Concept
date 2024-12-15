@@ -49,7 +49,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Component id="areatexttank" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="redarbtnt" min="-2" pref="123" max="-2" attributes="0"/>
@@ -60,7 +60,7 @@
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jTextFieldhelicopter" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldTank" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="sendbtnh" min="-2" pref="62" max="-2" attributes="0"/>
                               </Group>
@@ -106,7 +106,7 @@
                               <Component id="positiontank" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Component id="areatexttank" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="shootbtnt" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
@@ -123,7 +123,7 @@
                       <Component id="jScrollPane1" min="-2" pref="140" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextFieldhelicopter" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldTank" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="sendbtnh" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -140,7 +140,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="areatexttank">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
@@ -155,7 +155,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextAreahelicopter">
+        <Component class="javax.swing.JTextArea" name="jTextAreaTank">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
@@ -163,7 +163,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="jTextFieldhelicopter">
+    <Component class="javax.swing.JTextField" name="jTextFieldTank">
     </Component>
     <Component class="javax.swing.JButton" name="sendbtnh">
       <Properties>

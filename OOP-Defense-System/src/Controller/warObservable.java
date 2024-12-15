@@ -18,19 +18,45 @@ public class warObservable implements warObservableInterface{
     int value;
     String message;
 
-    @Override
-    public void areaClear(boolean isChecked) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+   public void areaClear(boolean isChecked) {
+        if (this.isChecked!=isChecked) {
+            this.isChecked=isChecked;
+        }
+        areaClearing();
+    }
+    
+    public void areaClearing(){
+        for (warObserver observer : mainWarArray) {
+            observer.setAreaClear(isChecked);
+        }
     }
 
     @Override
-    public void activeButton(int value) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void activeButtons(int value) {
+        if (value!=0) {
+            this.value = value;
+        }
+        activatingButtons();
+    
+    }
+    
+     public void activatingButtons(){
+        for (warObserver observer : mainWarArray) {
+            observer.setActivateButtons(value);
+        }
     }
 
-    @Override
-    public void messageFromMainController(String message) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+  public void messageFromMainController(String message){
+        if (message!=null) {
+            this.message = message;
+        }
+        messageSending();
+    }
+    
+    public void messageSending(){
+        for (warObserver observer : mainWarArray) {
+            observer.setMessageFromMainController(message);
+        }
     }
     
     private void extendWarArray(){

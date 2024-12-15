@@ -36,7 +36,7 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel5 = new javax.swing.JLabel();
+        areatext = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreahelicopter = new javax.swing.JTextArea();
         jTextFieldhelicopter = new javax.swing.JTextField();
@@ -55,8 +55,8 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Helicopter");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel5.setText("Area Not Cleared");
+        areatext.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        areatext.setText("Area Not Cleared");
 
         jTextAreahelicopter.setColumns(20);
         jTextAreahelicopter.setRows(5);
@@ -112,6 +112,11 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         positionhelicopter.setText("Position");
+        positionhelicopter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                positionhelicopterActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,7 +150,7 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(79, 79, 79)
-                                    .addComponent(jLabel5))
+                                    .addComponent(areatext))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jTextFieldhelicopter, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -179,7 +184,7 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
                                 .addGap(18, 18, 18)
                                 .addComponent(positionhelicopter))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(areatext)
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(shootbtnh, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -204,7 +209,7 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendbtnhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendbtnhActionPerformed
-        // TODO add your handling code here:
+        main.setMessageheli(" "+jTextFieldhelicopter.getText());
     }//GEN-LAST:event_sendbtnhActionPerformed
 
     private void laserbtnhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laserbtnhActionPerformed
@@ -219,9 +224,13 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
         // TODO add your handling code here:
     }//GEN-LAST:event_shootbtnhActionPerformed
 
+    private void positionhelicopterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positionhelicopterActionPerformed
+            isCheckedPosition = positionhelicopter.isSelected();
+    }//GEN-LAST:event_positionhelicopterActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ammotext;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel areatext;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSlider jSlider1;
@@ -238,17 +247,36 @@ public class Helicopter extends javax.swing.JFrame implements warObserver {
     // End of variables declaration//GEN-END:variables
 
     @Override
-    public void setAreaClear(boolean isChecked) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+     public void setAreaClear(boolean isChecked){
+        if (isChecked) {
+            areatext.setText("Area Cleared");
+        }else{
+            areatext.setText("Area Not Cleared");
+        }
     }
-
     @Override
     public void setActivateButtons(int value) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (isCheckedPosition) {
+            if (value>25) {
+                shootbtnh.setEnabled(true);
+            }else{
+                shootbtnh.setEnabled(false);
+            }
+            if (value>50) {
+                missilebtnh.setEnabled(true);
+            }else{
+                missilebtnh.setEnabled(false);
+            }
+            if (value>75) {
+                laserbtnh.setEnabled(true);
+            }else{
+                laserbtnh.setEnabled(false);
+            }
+        }
     }
 
     @Override
     public void setMessageFromMainController(String message) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        jTextAreahelicopter.setText(message);
     }
 }

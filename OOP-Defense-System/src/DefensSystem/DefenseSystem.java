@@ -23,8 +23,6 @@ public class DefenseSystem {
         war.addToWarArray(new Helicopter(main));
         war.addToWarArray(new Tank(main));
         war.addToWarArray(new Submarine(main));
-       
+   
     }
-    
-    
 }
