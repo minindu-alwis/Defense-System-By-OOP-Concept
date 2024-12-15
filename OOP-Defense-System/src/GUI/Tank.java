@@ -4,19 +4,29 @@
  */
 package GUI;
 
+import Interfaces.warObserver;
+
 /**
  *
  * @author hp
  */
-public class Tank extends javax.swing.JFrame {
+public class Tank extends javax.swing.JFrame implements warObserver{
 
-    /**
-     * Creates new form Helicopter
-     */
-    public Tank() {
+    boolean isCheckedPosition = false;
+    private Maincontroller main;
+
+    public Tank(Maincontroller main) {
         initComponents();
+        this.main=main;
+        setTitle("Tank");
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setLocation(360, 500);
+        setVisible(true);
+        missilebtnt.setEnabled(false);
+        redarbtnt.setEnabled(false);
+        rotatebtnht.setEnabled(false);
+        shootbtnt.setEnabled(false);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -235,47 +245,7 @@ public class Tank extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_positiontankActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Tank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Tank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Tank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Tank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Tank().setVisible(true);
-            }
-        });
-    }
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ammotext;
@@ -295,4 +265,19 @@ public class Tank extends javax.swing.JFrame {
     private javax.swing.JButton shootbtnt;
     private javax.swing.JLabel soldiertext;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void setAreaClear(boolean isChecked) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void setActivateButtons(int value) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void setMessageFromMainController(String message) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
